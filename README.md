@@ -3,7 +3,7 @@
 前端简单框架搭建教程，yarn + webpack + babel + react
 
 
-yarn: 模块管理工具。
+**yarn: 模块管理工具**
 
     >yarn是google，facebook，exponent和Tilde开发的一种新的JavaScript软件包管理器。目的在于解决npm面临的问题：
 
@@ -13,7 +13,7 @@ yarn: 模块管理工具。
 
 yarn和npm的异同，参照文章：http://www.jianshu.com/p/2db9f278494a
 
-webpack：模块打包机  
+**webpack：模块打包机**  
 
     分析项目的结构，找到JavaScript模块以及其他的一些浏览器不能直接运行的扩展语言（Scss, TypeScript等），并将其打包为合适的格式以供浏览器使用。
 
@@ -27,14 +27,15 @@ webpack和Grunt和Gulp的异同
 
     WebPack的工作方式：把你的项目当作一个整体，通过一个给定的主文件（比如：index.js），WebPack将从这个文件开始找到你的项目的所有依赖文件，使用loaders处理它们，最后打包一个浏览器可识别的JavaScript文件。
 
-babel：编译器。将es6转为es5  
+**babel：编译器。将es6转为es5**  
 
-react: 前端UI开发框架，facebook开发的一款js库  
+**react: 前端UI开发框架，facebook开发的一款js库**  
 
 flux + facebook ＝》 以某种方式组织代码，使其更加可预测  
 
 flux是一个系统架构，用于推进应用中的数据单项流动    
 
+------------------------------------
 
 构建过程，参照文章https://scotch.io/tutorials/setup-a-react-environment-using-webpack-and-babel  
 
@@ -87,6 +88,7 @@ module.exports = {
 
 6. touch .babelrc  
 配置babel：
+
 /*   
 ./.babelrc  
 */   
@@ -100,7 +102,7 @@ module.exports = {
 
 **前端文件初始化**  
 
-7.  > mkdir client  
+7. > mkdir client  
 > cd client  
 > touch index.js  
 > touch index.html  
@@ -111,11 +113,11 @@ module.exports = {
 
 8. yarn add html-webpack-plugin  
 
-修改webpack的配置文件  
+**修改webpack的配置文件**  
+
 /*   
 ./webpack.config.js  
 */  
-
 ```
 const path = require('path');
 
@@ -148,16 +150,16 @@ index.js文件:
 ./client/index.js  
 which is the webpack entry file  
 */  
-
 ```
 console.log('Hey guys and ladies!!')
 ```
 
 index.html文件：
-/*
-./client/index.html
-basic html skeleton
-*/
+
+/*  
+./client/index.html  
+basic html skeleton  
+*/  
 ```
 <!DOCTYPE html>
 <html>
@@ -178,7 +180,7 @@ basic html skeleton
 
 **添加react的测试**  
 
-yarn add react react-dom
+> yarn add react react-dom
 > cd client  
 > mkdir components   
 > cd components  
@@ -190,7 +192,6 @@ yarn add react react-dom
 /*  
 ./client/components/App.jsx  
 */  
-
 ```js
 import React from 'react';
 
@@ -207,7 +208,6 @@ export default class App extends React.Component {
 /*  
 ./client/index.js  
 */  
-
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
